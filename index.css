@@ -1,0 +1,210 @@
+.section-body {
+  color: blanchedalmond;
+  height: 77vh;
+}
+
+.section-body-2 {
+  color: #bf77f6;
+  height: 150vh;
+}
+
+.section-body-3 {
+  color: #bf77f6;
+}
+
+.section-top-bottom{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.title-top-bottom{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.accordion-row{
+  width: 85vw;
+  background-color: #171616;
+}
+
+.contactus{
+  width: 85vw;
+}
+
+@media (min-width: 576px) {
+  .heading {
+    font-size: 100px;
+  }
+
+  .heading-2 {
+    font-size: 75px;
+  }
+}
+
+.sub-heading {
+  font-size: x-large;
+}
+
+.sub-heading-2 {
+  font-size: 20px;
+}
+
+.sub-heading-3 {
+  font-size: 30px;
+}
+
+.section-2 {
+  background-color: #240032;
+}
+
+.section-3 {
+  background-color: #2a2e32;
+}
+
+.accordion-header-section {
+  background-color: #240032;
+  color: #ffffff;
+}
+
+.card-section {
+  background-color: #242424;
+  color: #ffffff;
+}
+
+.social-icons {
+  margin: 0px 3px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .accordion-section {
+    width: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .accordion-section {
+    width: auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .accordion-section {
+    width: auto;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .accordion-section {
+    width: auto;
+  }
+}
+
+
+/* navar color */
+.navbar-custom {
+  background-color: #4b0158;
+}
+.navbar-custom .navbar-nav .nav-link,
+.navbar-custom .navbar-brand {
+  color: white;
+}
+.navbar-custom .navbar-nav .nav-link.active {
+  color: #d3a0ff; /* Light purple for active link */
+}
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-brand:hover {
+  color: lightgray;
+}
+
+.custom-display-6 {
+  font-size: 30px; /* Adjust the size as needed */
+}
+
+#Domain {
+  background-image: url('Images/galaxy_domain.jpg'); /* Add your image URL */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  color: blanchedalmond; /* Keeps the text color as you want */
+  padding: 50px 0; /* Adds some padding to the top and bottom */
+}
+
+.section-3 {
+  background-image: url('Images/Home.jpeg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  color: blanchedalmond; /* Ensures text color is legible over the background */
+  padding: 50px 0; /* Adds padding to create space around content */
+}
+
+#Tools {
+  background-image: url('Images/galaxy_tools.avif'); /* Replace with the path to your image */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  color: blanchedalmond; /* Ensures the text is readable */
+  padding: 50px 0; /* Adds padding around the content */
+}
+
+
+#Team {
+  background-image: url('Images/galaxy_team.jpg'); /* Replace with the path to your team background image */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  color: blanchedalmond; /* Adjusts the text color for readability */
+  padding: 50px 0; /* Adds space around the content */
+}
+
+
+
+
+.section-body {
+  color: blanchedalmond; /* Text color */
+  padding: 50px 20px; /* Padding for spacing */
+  height: 100vh; /* Optional: Define height for consistent layout */
+}
+
+#Home {
+  background-image: url('Images/galaxy_home.jpeg'); /* Path to your background image */
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  min-height: 77vh; /* Ensure the section maintains at least this height */
+}
+
+.text-center {
+  text-align: center; /* Center the text */
+}
+
+.row {
+  height: 100%; /* Ensures the row takes full height of the section */
+}
+
+.img-fluid {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for active accordion item */
+.accordion-button:not(.collapsed) {
+  background-color: #d3a0ff; /* Light purple color */
+  color: #000; /* Change text color if needed */
+}
+
+/* Optional: Change the color of the icon */
+.accordion-button:not(.collapsed) i {
+  color: #000; /* Change icon color if needed */
+}
+
+/* Optional: Adjust the transition effect */
+.accordion-button {
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+

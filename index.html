@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- Import Fontawesome -->
+  <script src="https://kit.fontawesome.com/ee2c6a13c7.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="./Images/logo.png" />
+  <link rel="stylesheet" href="Footer.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="Milestone.css" />
+  <title>AI Powered Code Repository Analyzer</title>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CodeAnalyzer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Introduction">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Domain">Domain</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Milestones">Milestones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Provide">What do we provide</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Documents">Documents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Tools">Tools and Technologies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Achievements">Achievements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    // Get all the nav links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    // Function to remove active class from all nav links
+    function removeActiveClass() {
+      navLinks.forEach(nav => nav.classList.remove('active'));
+    }
+
+    // Add click event listener to each link
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        removeActiveClass();
+        this.classList.add('active');
+      });
+    });
+
+    // Function to add active class based on scroll position
+    function setActiveLink() {
+      const sections = document.querySelectorAll('section'); // Select all sections
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect(); // Get the bounding rectangle of the section
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          const id = section.getAttribute('id'); // Get the id of the section
+          removeActiveClass();
+          const activeLink = document.querySelector(`a[href="#${id}"]`);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', setActiveLink);
+  </script>
+
+  <section id="Home">
+    <div class="section-body container">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="text-center">
+          <img style="margin-top: -90px;" src="./Images/logo.png" class="img-fluid rounded" alt="Logo" />
+          <p class="display-6" style="margin-top: -60px; color: black; font-weight: bold; font-size: 30px;">
+            AI-POWERED INTEGRATED CODE REPOSITORY ANALYZER <br />
+            ENHANCING DEVELOPER WORKFLOWS WITH AUTOMATION & INTELLIGENCE
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section id="Introduction" class="section-body section-2 h-100">
+    <header class="container h-100">
+      <div class="d-flex align-items-center justify-content-center h-100">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom" style="color: #6f42c1;">Who are we?</p>
+          <p class="display-6 custom-display-6" style="color: #6f42c1;">
+            We are a team of researchers and software engineers dedicated to revolutionizing the Software Development Life Cycle (SDLC) through AI-powered automation. Our
+            system simplifies complex codebase understanding, accelerates developer onboarding, and enhances code quality by integrating large language models, machine
+            learning, and advanced AI techniques tailored for modern software frameworks like Next.js.
+          </p>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Domain Section -->
+  <section id="Domain" class="section-body-3 section-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-3 fw-bolder title-top-bottom">Our Domain</p>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item section-2 accordion-section accordion-row">
+              <h2 class="accordion-header accordion-row" id="flush-headingOne">
+                <button class="accordion-button collapsed accordion-header-section accordion-row" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                  aria-controls="flush-collapseOne">
+                  <i class="fa-sharp fa-solid fa-code"></i> &nbsp; Background
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse accordion-row"
+                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body accordion-row text-start">
+                  <i class="fa-solid fa-bars-staggered"></i> &nbsp; Modern software development faces increasing complexity with rapidly evolving frameworks and large codebases. Traditional knowledge transfer methods, including manual documentation and mentoring, struggle to keep pace with industry demands. Our domain focuses on leveraging AI, including large language models and machine learning, to automate documentation, knowledge transfer, code visualization, and quality assurance, empowering developers to efficiently navigate and contribute to complex projects.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item section-2 accordion-section accordion-row">
+              <h2 class="accordion-header accordion-row" id="flush-headingTwo">
+                <button class="accordion-button collapsed accordion-header-section accordion-row" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                  aria-controls="flush-collapseTwo">
+                  <i class="fa-sharp fa-solid fa-search"></i> &nbsp; Research Gap
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse accordion-row"
+                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body accordion-row text-start">
+                  <i class="fa-solid fa-bars-staggered"></i> &nbsp; Despite advancements in developer tools, gaps remain in scalable, project-specific AI solutions that provide comprehensive documentation, interactive knowledge transfer, real-time code visualization, and actionable code quality feedback. Existing tools often lack adaptability to modern frameworks like Next.js or fail to incorporate emotional and performance metrics for developer evaluation.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item section-2 accordion-section">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed accordion-header-section accordion-row" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                  aria-controls="flush-collapseThree">
+                  <i class="fa-sharp fa-solid fa-bug"></i> &nbsp; Research Problems
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse accordion-row"
+                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body accordion-row text-start">
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Manual code documentation is time-consuming and prone to obsolescence in fast-paced projects.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Knowledge transfer depends heavily on senior developer availability, limiting onboarding scalability.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Visualizing complex codebases, especially in modern frameworks, remains a challenge for developers.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Existing code review tools lack integration of AI-driven design smell detection and personalized feedback.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item section-2 accordion-section">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed accordion-header-section accordion-row" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                  aria-controls="flush-collapseFour">
+                  <i class="fa-solid fa-bullseye"></i> &nbsp; Research Objectives
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse accordion-row"
+                aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body accordion-row text-start">
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Automate comprehensive project documentation generation using AI for Next.js repositories.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Develop an AI-powered chatbot for knowledge transfer with evaluation and training modes, integrating emotional intelligence.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Create automated visualizations of code structure and interactions to aid developer understanding.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Implement code smell detection models that provide actionable, AI-generated feedback to improve code quality.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Milestones Component -->
+  <section id="Milestones" class="section-body-3 section-2 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-3 fw-bolder title-top-bottom">Milestones</p>
+          <div class="container">
+            <div class="main-timeline">
+              <!-- start Project Topic Assessment section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">January</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Project Topic Assessment (No marks allocated)</h5>
+                  <p class="description">
+                    Initial topic assessment document of the proposed research was submitted for evaluation. It included a brief overview of research problems, objectives, and solution breakdown.
+                  </p>
+                </div>
+              </div>
+              <!-- end Project Topic Assessment section-->
+
+              <!-- start Project Charter Submission section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">January</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Project Charter Submission (No marks allocated)</h5>
+                  <p class="description">
+                    The project charter document was submitted for evaluation, detailing research scope and team responsibilities.
+                  </p>
+                </div>
+              </div>
+              <!-- end Project Charter Submission section-->
+
+              <!-- start Project Proposal Presentation section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">February</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Project Proposal Presentation (Marks Allocation - 5%)</h5>
+                  <p class="description">Presented to a panel to overview the proposed research solution.</p>
+                </div>
+              </div>
+              <!-- end Project Proposal Presentation section-->
+
+              <!-- start Project Proposal Report section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">February</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Project Proposal Report (Marks Allocation - 7%)</h5>
+                  <p class="description">
+                    Submitted an in-depth analysis of research problems, objectives, and proposed solutions.
+                  </p>
+                </div>
+              </div>
+              <!-- end Project Proposal Report section-->
+
+              <!-- start Status Document 1 section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">May</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Status Document 1 (Marks Allocation - 1%)</h5>
+                  <p class="description">
+                    Overview of key tasks during implementation phase.
+                  </p>
+                </div>
+              </div>
+              <!-- end Status Document 1 section-->
+
+              <!-- start Progress Presentation 1 section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">May</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Progress Presentation 1 (Marks Allocation - 15%)</h5>
+                  <p class="description">Evaluation of 50% completion by panel judges.</p>
+                </div>
+              </div>
+              <!-- end Progress Presentation 1 section-->
+
+              <!-- Additional milestones omitted for brevity; keep or adjust as needed -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- What do we provide Component -->
+  <section id="Provide" class="section-3 section-body-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">What do we provide?</p>
+          <div class="row">
+            <!-- Automated Code Documenter -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Automated Code Documenter</h5>
+                  <br />
+                  <i class="fa-solid fa-file-code fa-2xl"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    AI-powered automated documentation generator for Next.js projects, drastically reducing manual effort and ensuring up-to-date, comprehensive codebase documentation.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Virtualized Knowledge Transfer Assistant -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Virtualized Knowledge Transfer Assistant</h5>
+                  <br />
+                  <i class="fa-solid fa-robot fa-2xl"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    AI-driven chatbot that provides personalized coding assistance, adaptive evaluation, and emotional support to accelerate developer onboarding and skill development.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Automated Diagram Generator -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Automated Diagram Generator</h5>
+                  <br />
+                  <i class="fa-solid fa-diagram-project fa-2xl"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    Generates detailed activity diagrams from complex codebases, enhancing visualization of component interactions and simplifying code comprehension.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Code Smell Identifier with Feedback Generator -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Code Smell Identifier with Feedback Generator</h5>
+                  <br />
+                  <i class="fa-solid fa-bug fa-2xl"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    AI-based system detects code and design smells, providing actionable feedback to improve code quality and maintainability through an intuitive dashboard.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Documents Component -->
+ <!-- Documents Component -->
+<section id="Documents" class="section-2 section-body-3 section-top-bottom">
+  <header class="container">
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="d-flex flex-column text-center">
+        <p class="display-2 fw-bolder title-top-bottom">Documents</p>
+        <!--Project Proposals-->
+        <div class="row">
+          <p class="sub-heading-3">Project Proposal</p>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Proposal Presentation - Team</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/1XHeT-S2JC_WdJsmR2F3GGuaIj8B5atu-/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Proposal Document - IT21029868</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/14CIPAO9zzStIDm93juK-8wOHjV7W9ObW/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Proposal Document - IT20708276</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/1nhG7UrTwVuZsCRI-Cjvcy00hDTmDpHh0/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Proposal Document - IT21064654</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/1NE7wPQYmo6RplOpawbtm3jPz8fejOiMU/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Proposal Document - IT21088582</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/1ihp8qQq64UEC4iI93uMF4MEYoSRMpKY0/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Status Documents 01-->
+        <div class="row">
+          <p class="sub-heading-3">Status Document 01</p>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">IT21029868</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/1xtbcQRi68q-TT05X8fORVDXQ_fqSE42F/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">IT20708276</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/1bR33lHXFL4pCWKuDbYSHBTf9-64wgADD/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">IT21064654</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/1WhOW-3D54E2IUbZ2ecUZDRb5vv74IBf8/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">IT21088582</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/19x0GgCIIUfsfqhS4rO3o0eddgwTxyAl5/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Progress Presentation 01-->
+        <div class="row">
+          <p class="sub-heading-3">Progress Presentation 01
+          </p>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Progress Presentation 01
+                </h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/1EX3PAjljI18bTKR2iHoqOH5Bkisb8dAH/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--Progress Presentation 02-->
+        <div class="row">
+          <p class="sub-heading-3">Progress Presentation 02</p>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Progress Presentation 02</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/1TPO4Rs-UxPQbjve09SPjPTZvkL5hHu5b/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Poster</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/15ofqY40J4ubrS9X7bLOjXoMDnbgQcO_Z/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!--final Presentation-->
+         <div class="row">
+          <p class="sub-heading-3"> Final Presentation</p>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Final Presentation</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/1zl2K9Q0anrWl-7sk9S1bFApF56HvHwGp/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Final Reports-->
+        <div class="row">
+          <p class="sub-heading-3">Final Reports </p>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Final Report - IT21029868</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/17MGbRyRWL0NzpjgyuNOAOE28M8ANU_vj/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Final Report - IT20708276</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/106HyTIX9Sy8qt4ljQcAzlIeGeqBNrD5r/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Final Report - IT21064654</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/138SbJSOWn_FSXdlwINk-p__Dt2IHWa3B/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Final Report - IT21088582</h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/1L1mA1RHdopq0oAbwJ_8qbXwFzCgxv6GA/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Project Registration Documents-->
+        <div class="row">
+          <p class="sub-heading-3">Project Registration Documents</p>
+          <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+            <div class="card card-section">
+              <div class="card-body">
+                <h5 class="card-title">Topic Assessment
+                </h5>
+                <br />
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+                <br /><br />
+                <a href="https://drive.google.com/file/d/1Axi-JTCR4YuF87quG557mMvZUvVP4LRa/view?usp=sharing"
+                  target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </header>
+</section>
+
+
+  <!-- Tools and Technologies Component -->
+  <section id="Tools" class="section-body-3 section-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Tools and Technologies</p>
+          <div class="row">
+            <!-- Python -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Python</h5>
+                  <br />
+                  <i class="fa-brands fa-python fa-5x"></i>
+                  <br /><br />
+                </div>
+              </div>
+            </div>
+            <!-- OpenAI / LLM -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">OpenAI GPT / LLMs</h5>
+                  <br />
+                  <i class="fa-solid fa-robot fa-5x"></i>
+                  <br /><br />
+                </div>
+              </div>
+            </div>
+            <!-- TensorFlow -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">TensorFlow</h5>
+                  <br />
+                  <i class="fa-brands fa-tensorflow fa-5x"></i>
+                  <br /><br />
+                </div>
+              </div>
+            </div>
+            <!-- PyTorch -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">PyTorch</h5>
+                  <br />
+                  <i class="fa-brands fa-pytorch fa-5x"></i>
+                  <br /><br />
+                </div>
+              </div>
+            </div>
+            <!-- GitHub -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">GitHub</h5>
+                  <br />
+                  <i class="fa-brands fa-github fa-5x"></i>
+                  <br /><br />
+                </div>
+              </div>
+            </div>
+            <!-- NetworkX -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">NetworkX</h5>
+                  <br />
+                  <i class="fa-solid fa-project-diagram fa-5x"></i>
+                  <br /><br />
+                </div>
+              </div>
+            </div>
+            <!-- Matplotlib -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Matplotlib</h5>
+                  <br />
+                  <i class="fa-solid fa-chart-bar fa-5x"></i>
+                  <br /><br />
+                </div>
+              </div>
+            </div>
+            <!-- Add more tools as needed -->
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Achievements Component -->
+  <section id="Achievements" class="section-body-3 section-2 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Achievements</p>
+          <div class="row">
+            <!-- Research Paper Acceptance -->
+            <div class="col-12">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h2 class="card-title">6th International Conference on Advancements in Computing (ICAC) 2024</h2>
+                  <br />
+                  <i class="fa-sharp fa-solid fa-trophy fa-5x"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    Our research paper on AI-powered code repository analysis was accepted, highlighting innovations in automated documentation, developer onboarding, and code quality enhancement.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Add more achievements if applicable -->
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Team Component -->
+  <section id="Team" class="section-body-3 section-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Team</p>
+          <div class="row">
+            <!-- Member 1 -->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Isuru A. Hettiarachchi <br /> (Lead Researcher)</h5>
+                  <br />
+                  <img src="./Images/Team/isuru.jpg" class="team-member-image img-fluid rounded" alt="Isuru" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/isuru-hettiarachchi" class="social-icons" target="_blank"><i
+                      class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Member 2 -->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">A.M.N.A.S Abeykoon <br /> (Co-Researcher)</h5>
+                  <br />
+                  <img src="./Images/Team/amnas.jpg" class="team-member-image img-fluid rounded" alt="Amnas" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/amnas-abeykoon" class="social-icons" target="_blank"><i
+                      class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Member 3 -->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">De Silva S.K.S <br /> (Co-Researcher)</h5>
+                  <br />
+                  <img src="./Images/Team/desilva.jpg" class="team-member-image img-fluid rounded" alt="De Silva" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/desilva-sks" class="social-icons" target="_blank"><i
+                      class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Member 4 -->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Dinuka R. Wijendra <br /> (Co-Researcher)</h5>
+                  <br />
+                  <img src="./Images/Team/dinuka.jpg" class="team-member-image img-fluid rounded" alt="Dinuka" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/dinuka-wijendra" class="social-icons" target="_blank"><i
+                      class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Add more team members as needed -->
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Contact Component -->
+  <section id="Contact" class="section-body-3 section-2 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Contact</p>
+          <div class="row contactus">
+            <div class="col-12">
+              <div class="card card-section">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Inquiry</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1" />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="background-color: purple; border-color: purple;">Submit</button>
+                      </form>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="card-text">Please contact us for any clarification</p>
+                      <p class="card-text">
+                        ai.coderepo.team@example.com
+                      </p>
+                      <p class="card-text">
+                        +94 xx xxx xxxx
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 flex-shrink-0 section-top-bottom">
+    <div class="container py-4">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <h5 class="h1 text-white">CodeAnalyzer</h5>
+          <p class="small text-muted">
+            AI-Powered Integrated Code Repository Analyzer for Efficient Developer Workflow
+          </p>
+          <p class="small text-muted mb-0">
+            &copy; Copyrights. All rights reserved.
+          </p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3">Quick links</h5>
+          <ul class="list-unstyled text-muted">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Introduction">Introduction</a></li>
+            <li><a href="#Domain">Domain</a></li>
+            <li><a href="#Milestones">Milestones</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3">Quick links</h5>
+          <ul class="list-unstyled text-muted">
+            <li><a href="#Documents">Documents</a></li>
+            <li><a href="#Tools">Tools and Technologies</a></li>
+            <li><a href="#Team">Team</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="text-white mb-3">Newsletter</h5>
+          <p class="small text-muted">Subscribe to our newsletter for more information</p>
+          <form action="#">
+            <div class="input-group mb-3">
+              <input class="form-control" type="text" placeholder="Recipient's email"
+                aria-label="Recipient's email" aria-describedby="button-addon2" />
+              <button class="btn btn-primary" id="button-addon2" type="button" style="background-color: purple; border-color: purple;">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
